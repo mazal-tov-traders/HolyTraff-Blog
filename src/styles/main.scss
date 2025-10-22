@@ -1,0 +1,22 @@
+// Главный файл стилей - импортирует все остальные стили
+// Порядок импорта важен!
+
+// 1. Базовые стили (переменные, миксины, глобальные стили)
+@use 'fonts' as *;
+@use 'base/variables' as *;
+@use 'base/mixins';
+@use 'base/globals';
+
+// 3. UI Components (базовые переиспользуемые)
+@use 'components/ui/button';
+@use 'components/ui/logo';
+
+// 5. Layout Components (сложные макеты)
+@use 'components/layout/header';
+
+// 4. Макеты
+@use 'layout/app';
+
+// 5. Страницы (если есть)
+// @use 'pages/home';
+// @use 'pages/about';

@@ -1,0 +1,29 @@
+// ========================================
+// SCSS ПЕРЕМЕННЫЕ - ОСНОВНЫЕ ЗНАЧЕНИЯ
+// ========================================
+
+// Цвета
+$primary-color: #fff;
+$secondary-color: #6c757d;
+$tertiary-color: #90FF00;
+
+// Цвета для текста
+$text-primary: #333;
+$text-secondary: #666;
+
+// Шрифты
+$font-family-base: 'JetBrains Mono', sans-serif;
+$font-family-base-italic: 'JetBrains Mono Italic', sans-serif;
+$font-family-secondary: 'Arial Black', sans-serif;
+$font-family-secondary-italic: 'Arial Black Italic', sans-serif;
+
+// Переходы
+$transition: all 0.3s ease;
+$transition-fast: all 0.15s ease;
+$transition-slow: all 0.5s ease;
+
+// Брейкпоинты
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

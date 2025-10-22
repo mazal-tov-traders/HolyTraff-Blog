@@ -1,0 +1,81 @@
+@use '../../base/variables' as *;
+@use 'sass:color';
+
+// ========================================
+// LOGO COMPONENT - ТЕМНЫЙ ДИЗАЙН
+// ========================================
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  transition: $transition;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+  
+  &:focus {
+    outline: 2px solid #00ff00;
+    outline-offset: 2px;
+  }
+}
+
+.logo__image {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: $transition;
+  
+  // Адаптивность
+  @media (max-width: $breakpoint-sm) {
+    height: 35px;
+  }
+}
+
+// ========================================
+// ТЕКСТОВЫЙ ЛОГОТИП ДЛЯ МОБИЛЬНОГО МЕНЮ
+// ========================================
+
+.logo-text {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: white;
+  
+  &--green {
+    color: #00ff00;
+  }
+}
+
+// ========================================
+// МОДИФИКАТОРЫ LOGO
+// ========================================
+
+.logo--large {
+  .logo__image {
+    height: 60px;
+    
+    @media (max-width: $breakpoint-sm) {
+      height: 50px;
+    }
+  }
+}
+
+.logo--small {
+  .logo__image {
+    height: 30px;
+    
+    @media (max-width: $breakpoint-sm) {
+      height: 25px;
+    }
+  }
+}
+
+.logo--white {
+  filter: brightness(0) invert(1);
+}
+
+.logo--dark {
+  filter: brightness(0);
+}
