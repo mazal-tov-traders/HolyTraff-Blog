@@ -64,11 +64,11 @@ class I18n {
       this.currentLanguage = savedLanguage;
     } else {
       const browserLanguage = navigator.language.split('-')[0];
-      
+
       // Если браузер на английском - используем английский
       if (browserLanguage === 'en') {
         this.currentLanguage = 'en';
-      } 
+      }
       // Для всех остальных языков (включая украинский) - используем украинский по умолчанию
       else {
         this.currentLanguage = 'uk';
@@ -78,17 +78,17 @@ class I18n {
 
   t(key: string): string {
     const keys = key.split('.');
-    let value: any = translations[this.currentLanguage];
+    let value: unknown = translations[this.currentLanguage];
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         // Fallback на английский
         value = translations['en'];
         for (const fallbackKey of keys) {
           if (value && typeof value === 'object' && fallbackKey in value) {
-            value = value[fallbackKey];
+            value = (value as Record<string, unknown>)[fallbackKey];
           } else {
             return key; // Возвращаем ключ, если перевод не найден
           }
@@ -105,7 +105,9 @@ class I18n {
       this.currentLanguage = language;
       localStorage.setItem('language', language);
       // Уведомляем компоненты об изменении языка
-      window.dispatchEvent(new CustomEvent('languageChanged', { detail: language }));
+      window.dispatchEvent(
+        new CustomEvent('languageChanged', { detail: language })
+      );
     }
   }
 
@@ -126,7 +128,8 @@ export const useTranslation = () => {
     };
 
     window.addEventListener('languageChanged', handleLanguageChange);
-    return () => window.removeEventListener('languageChanged', handleLanguageChange);
+    return () =>
+      window.removeEventListener('languageChanged', handleLanguageChange);
   }, []);
 
   return {

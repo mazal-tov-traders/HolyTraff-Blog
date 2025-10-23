@@ -3,8 +3,8 @@ import { useTranslation } from '../../i18n';
 import { useScroll } from '@/hooks/useScroll';
 import { Logo } from '@/components/ui';
 import { Navigation } from '@/components/common';
-import MobileMenuSVG from '@/assets/mobile-menu-svg';
-import CloseButtonSVG from '@/assets/btn-close-svg';
+import MobileMenuSVG from '@/assets/MobileMenuSVG';
+import CloseButtonSVG from '@/assets/CloseButtonSVG';
 
 interface HeaderProps {
   className?: string;
@@ -39,12 +39,11 @@ const Header: React.FC<HeaderProps> = ({
       className={`header ${isMobileMenuOpen ? 'header--mobile-menu-open' : ''} ${isScrolled ? 'header--scrolled' : ''} ${className}`}
     >
       <div className='header__container page-width'>
-        <Logo className='header__logo' variant='text' />
+        <Logo className='header__logo' />
 
         <Navigation items={navItems} className='header__nav' />
 
         <div className='header__controls'>
-         
           <button
             className='header__mobile-toggle'
             onClick={onToggleMobileMenu}

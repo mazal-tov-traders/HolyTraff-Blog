@@ -15,7 +15,7 @@
   transition: $transition;
 
   &--mobile-menu-open {
-    box-shadow: 0px 4px 10px 0px #FFFFFF40;
+    box-shadow: 0px 4px 10px 0px #ffffff40;
   }
 
   &--scrolled {
@@ -146,7 +146,7 @@
     background: transparent;
     cursor: pointer;
     transition: $transition;
-    color: #5E5E5E;
+    color: #5e5e5e;
     padding: 0;
 
     &:hover {
@@ -192,7 +192,6 @@
 
     .nav__item {
       border-bottom: 1px solid #b7b7b7;
-
     }
 
     .nav__link {

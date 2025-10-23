@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from './i18n';
-import { Header } from '@/components/layout';
+import { Header, Footer } from '@/components/layout';
 import { MobileMenu } from '@/components/common';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Header 
+      <Header
         isMobileMenuOpen={isMobileMenuOpen}
         onToggleMobileMenu={toggleMobileMenu}
       />
@@ -42,12 +42,14 @@ function App() {
             <h1>{t('common.welcome')}</h1>
             <p>React + Vite + TypeScript + SCSS + i18next</p>
             <p className='language-info'>
-              Текущий язык: <strong>{i18n.language}</strong> | 
-              Язык браузера: <strong>{navigator.language}</strong>
+              Текущий язык: <strong>{i18n.language}</strong> | Язык браузера:{' '}
+              <strong>{navigator.language}</strong>
             </p>
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

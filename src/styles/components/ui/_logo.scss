@@ -9,11 +9,11 @@
   display: inline-block;
   text-decoration: none;
   transition: $transition;
-  
+
   &:hover {
     opacity: 0.8;
   }
-  
+
   &:focus {
     outline: 2px solid #00ff00;
     outline-offset: 2px;
@@ -25,7 +25,7 @@
   width: auto;
   display: block;
   transition: $transition;
-  
+
   // Адаптивность
   @media (max-width: $breakpoint-sm) {
     height: 35px;
@@ -42,7 +42,7 @@
   font-size: 24px;
   letter-spacing: 1px;
   color: white;
-  
+
   &--green {
     color: #00ff00;
   }
@@ -55,7 +55,7 @@
 .logo--large {
   .logo__image {
     height: 60px;
-    
+
     @media (max-width: $breakpoint-sm) {
       height: 50px;
     }
@@ -65,7 +65,7 @@
 .logo--small {
   .logo__image {
     height: 30px;
-    
+
     @media (max-width: $breakpoint-sm) {
       height: 25px;
     }

@@ -1,0 +1,8 @@
+export { default as YouTubeGreenSVG } from './YouTubeGreenSVG';
+export { default as InstagramGreenSVG } from './InstagramGreenSVG';
+export { default as TelegramGreenSVG } from './TelegramGreenSVG';
+export { default as TiktokGreenSVG } from './TiktokGreenSVG';
+export { default as TelegramWhiteSVG } from './TelegramWhiteSVG';
+export { default as EmailWhiteSVG } from './EmailWhiteSVG';
+export { default as CloseButtonSVG } from './CloseButtonSVG';
+export { default as MobileMenuSVG } from './MobileMenuSVG';
