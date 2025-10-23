@@ -13,6 +13,10 @@
     "type-check": "tsc --noEmit",
     "preview": "vite preview",
     "clean": "rm -rf dist node_modules/.vite",
+    "clean:cache": "rm -rf node_modules/.cache .vscode/.tscache tsconfig.tsbuildinfo",
+    "clean:all": "npm run clean && npm run clean:cache",
+    "fresh": "npm run clean:all && npm install",
+    "clear-cache": "./scripts/clear-cache.sh",
     "analyze": "npm run build && npx vite-bundle-analyzer dist/stats.html"
   },
   "dependencies": {

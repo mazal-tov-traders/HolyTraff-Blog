@@ -6,3 +6,4 @@ export { default as TelegramWhiteSVG } from './TelegramWhiteSVG';
 export { default as EmailWhiteSVG } from './EmailWhiteSVG';
 export { default as CloseButtonSVG } from './CloseButtonSVG';
 export { default as MobileMenuSVG } from './MobileMenuSVG';
+export { default as RunningLineHolyTraffSVG } from './RunningLineHolyTraffSVG';

@@ -1,0 +1,44 @@
+{
+    // TypeScript настройки
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    // Кэш и производительность
+    "typescript.disableAutomaticTypeAcquisition": false,
+    "typescript.surveys.enabled": false,
+    "typescript.suggest.enabled": true,
+    "typescript.validate.enable": true,
+    // Автоматическое обновление
+    "typescript.preferences.includeCompletionsForModuleExports": true,
+    "typescript.preferences.includeCompletionsWithSnippetText": true,
+    // ESLint интеграция
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.workingDirectories": [
+        "."
+    ],
+    // Автосохранение и форматирование
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // Файловый наблюдатель
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/dist/**": true,
+        "**/.git/**": true,
+        "**/coverage/**": true
+    },
+    // TypeScript сервер
+    "typescript.tsserver.log": "off",
+    "typescript.tsserver.trace": "off",
+    // Предотвращение проблем с кэшем
+    "typescript.preferences.includeCompletionsForImportStatements": true,
+    "typescript.suggest.completeFunctionCalls": true
+}

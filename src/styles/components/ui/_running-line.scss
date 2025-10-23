@@ -1,0 +1,147 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+
+.running-line {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        animation: running-line-scroll linear infinite;
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+
+    &__svg-item {
+        flex-shrink: 0;
+        margin-right: 0;
+        display: inline-block;
+
+        svg {
+            width: 229px;
+            height: 36px;
+            display: block;
+
+            // Оптимизация производительности
+            transform: translateZ(0); // Принудительное использование GPU
+            backface-visibility: hidden;
+        }
+    }
+}
+
+// Анимация бегущей строки - оптимизированная
+@keyframes running-line-scroll {
+    0% {
+        transform: translate3d(0, 0, 0); // Используем translate3d для GPU
+    }
+
+    100% {
+        transform: translate3d(calc(-1 * var(--svg-width, 229px)), 0, 0); // Используем CSS переменную
+    }
+}
+
+.running-line::before,
+.running-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.running-line::before {
+    left: 0;
+    background: linear-gradient(to right, #000000 0%, transparent 100%);
+}
+
+.running-line::after {
+    right: 0;
+    background: linear-gradient(to left, #000000 0%, transparent 100%);
+}
+
+// Адаптивность
+@media (max-width: $breakpoint-lg) {
+    .running-line {
+        &__svg-item svg {
+            width: 200px;
+            height: 32px;
+        }
+    }
+
+    @keyframes running-line-scroll {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-200px, 0, 0);
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    .running-line {
+        &__svg-item svg {
+            width: 180px;
+            height: 28px;
+        }
+
+        &::before,
+        &::after {
+            width: 40px;
+        }
+    }
+
+    @keyframes running-line-scroll {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-180px, 0, 0);
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .running-line {
+        &__svg-item svg {
+            width: 160px;
+            height: 24px;
+        }
+
+        &::before,
+        &::after {
+            width: 30px;
+        }
+    }
+
+    @keyframes running-line-scroll {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(-160px, 0, 0);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .running-line__content {
+        animation: none;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .running-line__svg-item svg {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}

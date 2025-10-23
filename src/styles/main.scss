@@ -10,9 +10,11 @@
 // 3. UI Components (базовые переиспользуемые)
 @use 'components/ui/button';
 @use 'components/ui/logo';
+@use 'components/ui/running-line';
 
 // 5. Layout Components (сложные макеты)
 @use 'components/layout/header';
+@use 'components/layout/footer';
 
 // 4. Макеты
 @use 'layout/app';
