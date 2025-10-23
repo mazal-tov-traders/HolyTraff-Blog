@@ -40,7 +40,6 @@ function App() {
         <div className='container'>
           <div className='hero-section'>
             <h1>{t('common.welcome')}</h1>
-            <p>React + Vite + TypeScript + SCSS + i18next</p>
             <p className='language-info'>
               Текущий язык: <strong>{i18n.language}</strong> | Язык браузера:{' '}
               <strong>{navigator.language}</strong>
