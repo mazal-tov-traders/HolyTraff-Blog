@@ -1,10 +1,10 @@
+import { MobileMenu } from '@/components/common';
+import { Footer, Header } from '@/components/layout';
 import { useState } from 'react';
 import { useTranslation } from './i18n';
-import { Header, Footer } from '@/components/layout';
-import { MobileMenu } from '@/components/common';
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -38,13 +38,7 @@ function App() {
 
       <main className='app-main'>
         <div className='container'>
-          <div className='hero-section'>
-            <h1>{t('common.welcome')}</h1>
-            <p className='language-info'>
-              Текущий язык: <strong>{i18n.language}</strong> | Язык браузера:{' '}
-              <strong>{navigator.language}</strong>
-            </p>
-          </div>
+
         </div>
       </main>
 

@@ -7,18 +7,21 @@ import {
   YouTubeGreenSVG,
 } from '@/assets';
 import { Logo, RunningLine } from '@/components/ui';
+import { useTranslation } from '@/i18n';
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className='footer'>
       <div className='footer__container page-width'>
         <Logo className='header__logo' />
         <div className='footer__links'>
           <h3 className='footer__subtitle'>
-            <span className='footer__subtitle-withe'>звʼязатись</span>
+            <span className='footer__subtitle-withe'>{t('footer.contactUs1')}</span>
+            <span className='footer__subtitle-green'>{t('footer.contactUs2')}</span>
 
-            <span className='footer__subtitle-green'>з нами</span>
           </h3>
           <ul className='footer__list-social'>
             <li className='footer__item-social'>
@@ -112,25 +115,25 @@ const Footer: React.FC = () => {
       <nav className="footer__nav-links" aria-label="Footer navigation">
         <ul className='footer__list-nav-links'>
           <li className='footer__item-nav-link'>
-            <a href='/privacy' className='footer__link-nav-link'>Privacy</a>
+            <a href='/privacy' className='footer__link-nav-link'>{t('footer.privacy')}</a>
           </li>
           <li className='footer__item-nav-link'>
-            <a href='/policy' className='footer__link-nav-link'>Policy</a>
+            <a href='/policy' className='footer__link-nav-link'>{t('footer.policy')}</a>
           </li>
           <li className='footer__item-nav-link'>
-            <a href='/faq' className='footer__link-nav-link'>FAQ</a>
+            <a href='/faq' className='footer__link-nav-link'>{t('footer.faq')}</a>
           </li>
           <li className='footer__item-nav-link'>
-            <a href='/help' className='footer__link-nav-link'>Help Center</a>
+            <a href='/help' className='footer__link-nav-link'>{t('footer.helpCenter')}</a>
           </li>
           <li className='footer__item-nav-link'>
-            <a href='/about' className='footer__link-nav-link'>About</a>
+            <a href='/about' className='footer__link-nav-link'>{t('footer.about')}</a>
           </li>
         </ul>
       </nav>
       <div className='footer__copyright'>
         <p className='footer__copyright-text'>
-          HOLYTRAFF 2025. All rights reserved.
+          {t('footer.copyright')}
         </p>
       </div>
     </footer>

@@ -62,6 +62,7 @@
         display: flex;
         flex-wrap: nowrap;
         gap: 7px;
+        text-transform: uppercase;
 
         @media screen and (min-width: $breakpoint-lg) {
             font-size: 38px;

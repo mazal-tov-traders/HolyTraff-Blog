@@ -27,8 +27,19 @@ const translations: Record<string, Translations> = {
       ukrainian: 'Українська',
     },
     common: {
-      welcome: 'Welcome to Holy Site',
       loading: 'Loading...',
+    },
+    footer: {
+      contactUs1: 'Contact',
+      contactUs2: 'us',
+      socialMedia: 'Social Media',
+      navigation: 'Navigation',
+      privacy: 'Privacy',
+      policy: 'Policy',
+      faq: 'FAQ',
+      helpCenter: 'Help Center',
+      about: 'About',
+      copyright: 'HOLYTRAFF 2025. All rights reserved.',
     },
   },
   uk: {
@@ -48,8 +59,19 @@ const translations: Record<string, Translations> = {
       ukrainian: 'Українська',
     },
     common: {
-      welcome: 'Ласкаво просимо на Holy Site',
       loading: 'Завантаження...',
+    },
+    footer: {
+      contactUs1: 'звʼязатись',
+      contactUs2: 'з нами',
+      socialMedia: 'Соціальні мережі',
+      navigation: 'Навігація',
+      privacy: 'Конфіденційність',
+      policy: 'Політика',
+      faq: 'Питання',
+      helpCenter: 'Центр допомоги',
+      about: 'Про нас',
+      copyright: 'HOLYTRAFF 2025. Всі права захищені.',
     },
   },
 };
