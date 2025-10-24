@@ -7,3 +7,6 @@ export { default as EmailWhiteSVG } from './EmailWhiteSVG';
 export { default as CloseButtonSVG } from './CloseButtonSVG';
 export { default as MobileMenuSVG } from './MobileMenuSVG';
 export { default as RunningLineHolyTraffSVG } from './RunningLineHolyTraffSVG';
+export { default as YouTubeWitheSVG } from './YouTubeWitheSVG';
+export { default as InstagramWitheSVG } from './InstagramWitheSVG';
+export { default as TiktokWitheSVG } from './TiktokWitheSVG';

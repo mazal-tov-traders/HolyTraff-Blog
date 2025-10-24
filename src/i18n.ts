@@ -29,6 +29,12 @@ const translations: Record<string, Translations> = {
     common: {
       loading: 'Loading...',
     },
+    hero: {
+      title: 'We Holy Traff',
+      description: '- independent media covering events in the Igaming sphere',
+      buttonMarket: 'Holy traff Market',
+      buttonPartner: 'Become a partner',
+    },
     footer: {
       contactUs1: 'Contact',
       contactUs2: 'us',
@@ -60,6 +66,12 @@ const translations: Record<string, Translations> = {
     },
     common: {
       loading: 'Завантаження...',
+    },
+    hero: {
+      title: 'Ми Holy Traff',
+      description: '- незалежне медіа, яке висвітлює події у сфері Igaming',
+      buttonMarket: 'Holy traff Market',
+      buttonPartner: 'Стати партнером',
     },
     footer: {
       contactUs1: 'звʼязатись',
