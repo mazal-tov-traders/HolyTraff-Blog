@@ -80,9 +80,6 @@ const Hero: React.FC = () => {
                     <TiktokWitheSVG />
                 </a>
             </div>
-            <div className='hero__news-text'>
-                NEWS
-            </div>
         </section>
     );
 };

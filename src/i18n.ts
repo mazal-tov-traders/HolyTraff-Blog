@@ -35,6 +35,34 @@ const translations: Record<string, Translations> = {
       buttonMarket: 'Holy traff Market',
       buttonPartner: 'Become a partner',
     },
+    slider: {
+      holyApps: {
+        description: 'Meet new opportunities. Buy and earn.'
+      },
+      bashArbitrage: {
+        description: 'What you need to know about the most anticipated conference in Lviv. Who might be interested in this conference: Webmasters; Media buyers; Direct advertisers; Other representatives of affiliate marketing'
+      },
+      holyStudioShow: {
+        description: 'Creatives the world SHOULD NOT have seen! Did you think you\'d seen it all? Did you think it couldn\'t get any worse? Then we definitely have something to (un)pleasantly surprise you with.'
+      },
+      holyTraffBlog: {
+        description: 'Latest news and insights from the Igaming industry. Stay updated with HolyTraff Blog for exclusive content and expert analysis.'
+      }
+    },
+    news: {
+      holyApps: {
+        description: 'Meet new opportunities. Buy and earn.'
+      },
+      bashArbitrage: {
+        description: 'What you need to know about the most anticipated conference in Lviv. Who might be interested in this conference: Webmasters; Media buyers; Direct advertisers; Other representatives of affiliate marketing'
+      },
+      holyStudioShow: {
+        description: 'Creatives the world SHOULD NOT have seen! Did you think you\'d seen it all? Did you think it couldn\'t get any worse? Then we definitely have something to (un)pleasantly surprise you with.'
+      },
+      holyTraffBlog: {
+        description: 'Latest news and insights from the Igaming industry. Stay updated with HolyTraff Blog for exclusive content and expert analysis.'
+      }
+    },
     footer: {
       contactUs1: 'Contact',
       contactUs2: 'us',
@@ -72,6 +100,34 @@ const translations: Record<string, Translations> = {
       description: '- незалежне медіа, яке висвітлює події у сфері Igaming',
       buttonMarket: 'Holy traff Market',
       buttonPartner: 'Стати партнером',
+    },
+    slider: {
+      holyApps: {
+        description: 'Зустрічайте нові можливості. Придбайте та заробляйте.'
+      },
+      bashArbitrage: {
+        description: 'Що треба знати про найочікуванішу конференцію у Львові. Кому може бути цікава ця конференція: Вебмайстри; Медіабаєри; Прямі рекламодавці; Інші представники аффілейт-маркетингу'
+      },
+      holyStudioShow: {
+        description: 'Креативи, які світ НЕ ПОВИНЕН був побачити! Ви думали, що бачили все? Думали, що гірше не може бути? Тоді у нас точно є чим вас (не)приємно здивувати.'
+      },
+      holyTraffBlog: {
+        description: 'Останні новини та інсайти з індустрії Igaming. Будьте в курсі з HolyTraff Blog для ексклюзивного контенту та експертного аналізу.'
+      }
+    },
+    news: {
+      holyApps: {
+        description: 'Зустрічайте нові можливості. Придбайте та заробляйте.'
+      },
+      bashArbitrage: {
+        description: 'Що треба знати про найочікуванішу конференцію у Львові. Кому може бути цікава ця конференція: Вебмайстри; Медіабаєри; Прямі рекламодавці; Інші представники аффілейт-маркетингу'
+      },
+      holyStudioShow: {
+        description: 'Креативи, які світ НЕ ПОВИНЕН був побачити! Ви думали, що бачили все? Думали, що гірше не може бути? Тоді у нас точно є чим вас (не)приємно здивувати.'
+      },
+      holyTraffBlog: {
+        description: 'Останні новини та інсайти з індустрії Igaming. Будьте в курсі з HolyTraff Blog для ексклюзивного контенту та експертного аналізу.'
+      }
     },
     footer: {
       contactUs1: 'звʼязатись',

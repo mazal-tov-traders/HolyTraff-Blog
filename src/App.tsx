@@ -1,5 +1,5 @@
 import { MobileMenu } from '@/components/common';
-import { Footer, Header, Hero } from '@/components/layout';
+import { Footer, Header, Hero, NewsSection } from '@/components/layout';
 import { useState } from 'react';
 import { useTranslation } from './i18n';
 
@@ -38,6 +38,7 @@ function App() {
 
       <main className='app-main'>
         <Hero />
+        <NewsSection />
       </main>
 
       <Footer />

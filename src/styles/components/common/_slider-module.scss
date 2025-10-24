@@ -1,0 +1,89 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.embla {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 14px;
+
+    @media (min-width: $breakpoint-sm) {
+        flex: 0 0 50%;
+    }
+
+    @media (min-width: 1193px) {
+        flex: 0 0 33.333%;
+    }
+}
+
+.slider__prev,
+.slider__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: $transition;
+    z-index: 10;
+
+    &:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    @media (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.slider__prev {
+    left: -25px;
+}
+
+.slider__next {
+    right: -25px;
+}
+
+.slider__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.slider__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+        background: $tertiary-color;
+        transform: scale(1.2);
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}

@@ -16,8 +16,12 @@
 @use 'components/layout/header';
 @use 'components/layout/footer';
 @use 'components/layout/hero';
+@use 'components/layout/news-section';
 
-// 4. Макеты
+// 4. Common Components (переиспользуемые компоненты)
+@use 'components/common/slider-module';
+
+// 5. Макеты
 @use 'layout/app';
 
 // 5. Страницы (если есть)
