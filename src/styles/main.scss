@@ -17,6 +17,8 @@
 @use 'components/layout/footer';
 @use 'components/layout/hero';
 @use 'components/layout/news-section';
+@use 'components/layout/partners-section';
+@use 'components/layout/about-section';
 
 // 4. Common Components (переиспользуемые компоненты)
 @use 'components/common/slider-module';

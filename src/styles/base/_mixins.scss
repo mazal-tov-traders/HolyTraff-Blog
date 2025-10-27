@@ -27,6 +27,12 @@
   flex-direction: column;
 }
 
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @mixin flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +55,7 @@
 }
 
 @mixin text-jet-300-14px {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   font-weight: 300;
   font-size: 14px;
   line-height: 100%;
@@ -58,7 +64,7 @@
 }
 
 @mixin text-jet-500-14px {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
@@ -67,7 +73,7 @@
 }
 
 @mixin text-jet-300-16px {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   font-weight: 300;
   font-size: 16px;
   line-height: 100%;
@@ -76,7 +82,7 @@
 }
 
 @mixin text-jet-500-16px {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -85,7 +91,7 @@
 }
 
 @mixin text-jet-700-24px {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   font-weight: 700;
   font-size: 24px;
   line-height: 100%;

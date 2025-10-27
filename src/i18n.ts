@@ -63,6 +63,16 @@ const translations: Record<string, Translations> = {
         description: 'Latest news and insights from the Igaming industry. Stay updated with HolyTraff Blog for exclusive content and expert analysis.'
       }
     },
+    partners: {
+      subtitle: "OUR PARTNERS"
+    },
+    about: {
+      youtubeSubscribers: '2.2+ THOUSAND',
+      instagramSubscribers: '48.5+ THOUSAND',
+      description: 'is an expert platform on traffic arbitrage and the iGaming industry, covering key market events: conferences, business meetings and networking events. We talk about key players, affiliate programs, affiliates and brands that drive industry development.',
+      benefitsTitle: 'WHAT YOU GET WITH US?',
+      benefitsText: 'Brands, affiliate programs, platforms and services – expanding media presence, increasing the customer base and effective product positioning in the market. Affiliates – access to real successful company cases, exclusive terms from top affiliate programs and new opportunities for business scaling.'
+    },
     footer: {
       contactUs1: 'Contact',
       contactUs2: 'us',
@@ -128,6 +138,16 @@ const translations: Record<string, Translations> = {
       holyTraffBlog: {
         description: 'Останні новини та інсайти з індустрії Igaming. Будьте в курсі з HolyTraff Blog для ексклюзивного контенту та експертного аналізу.'
       }
+    },
+    partners: {
+      subtitle: "Нашi партнери"
+    },
+    about: {
+      youtubeSubscribers: '2.2+ ТИСЯЧ',
+      instagramSubscribers: '48.5+ ТИСЯЧ',
+      description: 'єкспертна платформа про арбітраж трафіку та індустрію iGaming, що висвітлює ключові події ринку: конференції, бізнес-мітинги та нетворкінг-заходи. Ми розповідаємо про провідних гравців, партнерські програми, аффіліатів і бренди, які визначають розвиток галузі.',
+      benefitsTitle: 'ЩО ВИ ОТРИМАЄТЕ З НАМИ?',
+      benefitsText: 'Бренди, партнерські програми, платформи та сервіси – розширення медійної присутності, збільшення клієнтської бази та ефективне позиціонування продуктів на ринку. Аффіліати – доступ до реальних кейсів успішних компаній, ексклюзивні умови від топових партнерських програм і нові можливості для масштабування бізнесу.'
     },
     footer: {
       contactUs1: 'звʼязатись',

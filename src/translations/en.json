@@ -17,5 +17,8 @@
   "common": {
     "welcome": "Welcome to Holy Site",
     "loading": "Loading..."
+  },
+  "partners": {
+    "subtitle": "OUR PARTNERS"
   }
 }

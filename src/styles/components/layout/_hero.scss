@@ -99,7 +99,7 @@
     }
 
     &__title {
-        font-family: $font-family-secondary;
+        font-family: $font-arial-black;
         font-weight: 900;
         font-size: 1.3rem;
         line-height: 110%;
@@ -121,7 +121,7 @@
     }
 
     &__description {
-        font-family: 'Arial', sans-serif;
+        font-family: $fotn-arial;
         font-weight: 400;
         font-size: 1rem;
         line-height: 110%;
@@ -168,7 +168,7 @@
         color: $primary-color;
         border-radius: 5px;
         background-color: black;
-        font-family: $font-family-base;
+        font-family: $font-jet-brains;
         font-weight: 700;
         font-size: 22px;
         text-transform: uppercase;

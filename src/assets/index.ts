@@ -12,3 +12,5 @@ export { default as InstagramWitheSVG } from './InstagramWitheSVG';
 export { default as TiktokWitheSVG } from './TiktokWitheSVG';
 export { default as LeftArrowSVG } from './LeftArrowSVG';
 export { default as RightArrowSVG } from './RightArrowSVG';
+export { default as LittleEllipseSVG } from './LittleEllipseSVG';
+export { default as EllipseSVG } from './EllipseSVG';

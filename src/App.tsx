@@ -1,5 +1,6 @@
 import { MobileMenu } from '@/components/common';
-import { Footer, Header, Hero, NewsSection } from '@/components/layout';
+import { Footer, Header, Hero, NewsSection, PartnersSection, AboutSection } from '@/components/layout';
+import { RunningLine } from '@/components/ui';
 import { useState } from 'react';
 import { useTranslation } from './i18n';
 
@@ -39,6 +40,13 @@ function App() {
       <main className='app-main'>
         <Hero />
         <NewsSection />
+        <PartnersSection />
+        <AboutSection />
+        <RunningLine
+          speed={3}
+          count={20}
+          className="footer__running-line"
+        />
       </main>
 
       <Footer />

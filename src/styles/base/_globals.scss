@@ -92,23 +92,11 @@ html {
 }
 
 body {
-  font-family: $font-family-base;
+  font-family: $font-jet-brains;
   color: white;
   background-color: #000000;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-// ========================================
-// CSS ПЕРЕМЕННЫЕ ДЛЯ JAVASCRIPT
-// ========================================
-
-:root {
-  --primary-color: #{$primary-color};
-  --secondary-color: #{$secondary-color};
-  --text-primary: #{$text-primary};
-  --text-secondary: #{$text-secondary};
-  --transition: #{$transition};
 }
 
 // ========================================
@@ -119,10 +107,12 @@ body {
 .page-width {
   margin: 0 auto;
   padding: 0 15px;
+
   @media (min-width: 768px) {
     padding: 0 35px;
   }
 }
+
 .container {
   max-width: 1200px;
 
@@ -165,7 +155,8 @@ body {
 }
 
 // Исправление для IE/Edge
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
   .container {
     display: block;
   }
@@ -191,6 +182,7 @@ body {
 // ========================================
 
 @media print {
+
   *,
   *::before,
   *::after {
