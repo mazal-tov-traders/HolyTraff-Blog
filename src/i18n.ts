@@ -66,6 +66,11 @@ const translations: Record<string, Translations> = {
     partners: {
       subtitle: "OUR PARTNERS"
     },
+    services: {
+      subtitle: "services",
+      learnMore: "LEARN MORE",
+      becomePartner: "BECOME A PARTNER"
+    },
     about: {
       youtubeSubscribers: '2.2+ THOUSAND',
       instagramSubscribers: '48.5+ THOUSAND',
@@ -141,6 +146,11 @@ const translations: Record<string, Translations> = {
     },
     partners: {
       subtitle: "Нашi партнери"
+    },
+    services: {
+      subtitle: "послуги",
+      learnMore: "ДІЗНАТИСЬ БІЛЬШЕ",
+      becomePartner: "СТАТИ ПАРТНЕРОМ"
     },
     about: {
       youtubeSubscribers: '2.2+ ТИСЯЧ',

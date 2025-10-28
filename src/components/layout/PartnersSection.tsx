@@ -18,12 +18,12 @@ const PartnersSection: React.FC<{ className?: string }> = ({ className = '' }) =
     return (
         <section className={`partners-section ${className}`} id="partners">
             <div className="page-width">
-                <div className="partners-section__title">
+                <h2 className="partners-section__title custom-heading-primary">
                     PARTNERS
-                </div>
-                <div className="partners-section__subtitle">
+                </h2>
+                <p className="partners-section__subtitle custom-heading-secondary">
                     {t('partners.subtitle')}
-                </div>
+                </p>
                 <div className="partners-section__container">
                     <div className="partners-section__grid">
                         {partners.map((partner, index) => {

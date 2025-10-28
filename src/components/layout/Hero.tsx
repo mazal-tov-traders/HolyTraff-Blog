@@ -54,10 +54,10 @@ const Hero: React.FC = () => {
                             </a>
                         </div>
                         <div className='hero__buttons'>
-                            <button className='hero__button'>
+                            <button className='hero__button custom-button-primary'>
                                 {t('hero.buttonMarket')}
                             </button>
-                            <button className='hero__button'>
+                            <button className='hero__button custom-button-primary'>
                                 {t('hero.buttonPartner')}
                             </button>
                         </div>

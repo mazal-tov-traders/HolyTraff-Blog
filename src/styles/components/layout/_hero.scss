@@ -163,39 +163,6 @@
         }
     }
 
-    &__button {
-        border: 2.5px solid $tertiary-color;
-        color: $primary-color;
-        border-radius: 5px;
-        background-color: black;
-        font-family: $font-jet-brains;
-        font-weight: 700;
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 11px 10px;
-        cursor: pointer;
-        transition: $transition;
-        box-shadow: 0 0 20px rgba(144, 255, 0, 0.3);
-        min-width: max-content;
-
-        &:hover {
-            background: $tertiary-color;
-            color: black;
-            box-shadow: 0 0 30px rgba(144, 255, 0, 0.6);
-        }
-
-        &:focus {
-            outline: 2px solid $tertiary-color;
-            outline-offset: 2px;
-        }
-
-        @media (min-width: $breakpoint-md) {
-            font-size: 30px;
-            padding: 13px 14px;
-        }
-    }
-
     &__social {
         display: none;
 
