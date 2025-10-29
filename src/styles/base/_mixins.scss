@@ -98,3 +98,22 @@
   text-transform: uppercase;
   letter-spacing: 0;
 }
+
+// Миксин для border с radial-gradient эффектом
+@mixin radial-border {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  padding: 0 1px;
+  background: $gradient-radial-border;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  z-index: 3;
+  pointer-events: none;
+}

@@ -71,6 +71,21 @@ const translations: Record<string, Translations> = {
       learnMore: "LEARN MORE",
       becomePartner: "BECOME A PARTNER"
     },
+    instagramServices: {
+      subtitle: "services",
+      reels: {
+        title: "REELS",
+        description: "Typically the plot goes like this: first, a conference overview, dynamic shots and stand filming; second, an interview; third, an interview with a merchandise review."
+      },
+      stories: {
+        title: "STORIES",
+        description: "Any format of filming and integration is discussed"
+      },
+      becomePartner: "BECOME A PARTNER"
+    },
+    marketServices: {
+      buy: "BUY"
+    },
     about: {
       youtubeSubscribers: '2.2+ THOUSAND',
       instagramSubscribers: '48.5+ THOUSAND',
@@ -151,6 +166,21 @@ const translations: Record<string, Translations> = {
       subtitle: "послуги",
       learnMore: "ДІЗНАТИСЬ БІЛЬШЕ",
       becomePartner: "СТАТИ ПАРТНЕРОМ"
+    },
+    instagramServices: {
+      subtitle: "послуги",
+      reels: {
+        title: "REELS",
+        description: "Як правило сюжетно йдуть таким чином: перший огляд конференції, динамічні кадри та зйомки стенду; другий інтерв'ю; третій інтерв'ю з оглядом мерча."
+      },
+      stories: {
+        title: "STORIES",
+        description: "Обговорюється будь-який формат зйомки та інтеграції"
+      },
+      becomePartner: "СТАТИ ПАРТНЕРОМ"
+    },
+    marketServices: {
+      buy: "Придбати"
     },
     about: {
       youtubeSubscribers: '2.2+ ТИСЯЧ',

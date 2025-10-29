@@ -7,25 +7,28 @@
 @use 'base/mixins';
 @use 'base/globals';
 
-// 3. UI Components (базовые переиспользуемые)
+// 2. UI Components (базовые переиспользуемые компоненты)
 @use 'components/ui/button';
 @use 'components/ui/logo';
 @use 'components/ui/running-line';
 
-// 5. Layout Components (сложные макеты)
+// 3. Common Components (переиспользуемые компоненты)
+@use 'components/common/slider-module';
+
+// 4. Layout Components (сложные макеты)
 @use 'components/layout/header';
 @use 'components/layout/footer';
 @use 'components/layout/hero';
 @use 'components/layout/news-section';
 @use 'components/layout/partners-section';
 @use 'components/layout/about-section';
-
-// 4. Common Components (переиспользуемые компоненты)
-@use 'components/common/slider-module';
+@use 'components/layout/services-section-instagram';
+@use 'components/layout/services-section-youtube';
+@use 'components/layout/services-section-market';
 
 // 5. Макеты
 @use 'layout/app';
 
-// 5. Страницы (если есть)
+// 6. Страницы (если есть)
 // @use 'pages/home';
 // @use 'pages/about';

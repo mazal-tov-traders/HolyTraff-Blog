@@ -1,0 +1,188 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+
+.services-section-market {
+    position: relative;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+    overflow: visible;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 180px 0 20px;
+        margin-top: 180px;
+    }
+
+    &__fon-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30, 30, 30, 0.502);
+        z-index: 2;
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+    }
+
+    &__title.custom-heading-primary {
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        pointer-events: none;
+        font-family: $font-arial-black;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 110%;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #000000;
+        -webkit-text-stroke: 1px #ffffff;
+        width: fit-content;
+        text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 80px;
+            top: -55px;
+            -webkit-text-stroke: 2px #ffffff;
+            text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 120px;
+            top: -77px;
+        }
+    }
+
+    &__container.page-width {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+
+        @media (max-width: $breakpoint-md) {
+            padding-left: 69px;
+            padding-right: 69px;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 52px;
+            padding-bottom: 52px;
+            margin-bottom: 52px;
+        }
+
+        .services-section-market__item {
+            padding: 32px 40px;
+            background: #000000;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+
+            @media (max-width: $breakpoint-md) {
+                padding: 40px 40px;
+            }
+
+            @media (min-width: $breakpoint-md) {
+                padding: 53px 86px;
+                width: auto;
+                max-width: none;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 4px;
+                padding: 0 1px;
+                @include radial-border;
+            }
+
+            .services-section-market__item-title {
+                font-family: $font-blangkon-remastered;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 110%;
+                letter-spacing: 5%;
+                text-transform: uppercase;
+                margin: 0;
+
+                @media (min-width: $breakpoint-md) {
+                    font-size: 48px;
+                }
+            }
+
+            .services-section-market__title-part-1 {
+                color: #ffffff;
+            }
+
+            .services-section-market__title-part-2 {
+                color: $tertiary-color;
+            }
+        }
+
+        .border-line-top,
+        .border-line-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            width: 80%;
+            margin: 0 auto;
+            background: $gradient-border-line-white;
+        }
+
+        .border-line-top {
+            top: 0;
+        }
+
+        .border-line-bottom {
+            bottom: 0;
+        }
+    }
+
+    &__cta.custom-button-primary {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        min-width: 280px;
+
+        @media (min-width: $breakpoint-md) {
+            min-width: 300px;
+        }
+    }
+
+    .running-line {
+        position: relative;
+        z-index: 10;
+        margin-top: 60px;
+
+        @media (min-width: $breakpoint-md) {
+            margin-top: 111px;
+        }
+
+        &::before {
+            background: linear-gradient(to right, #131313 0%, transparent 100%);
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, #131313 0%, transparent 100%);
+        }
+    }
+}

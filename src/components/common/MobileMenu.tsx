@@ -1,11 +1,6 @@
+import type { NavItem } from '@/types/navigation';
 import React from 'react';
 import Navigation from './Navigation';
-
-interface NavItem {
-  label: string;
-  href: string;
-  isActive?: boolean;
-}
 
 interface MobileMenuProps {
   isOpen: boolean;

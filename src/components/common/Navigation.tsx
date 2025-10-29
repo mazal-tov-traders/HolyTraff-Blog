@@ -1,11 +1,6 @@
-import React from 'react';
 import { LanguageSwitcher } from '@/components/ui';
-
-interface NavItem {
-  label: string;
-  href: string;
-  isActive?: boolean;
-}
+import type { NavItem } from '@/types/navigation';
+import React from 'react';
 
 interface NavigationProps {
   items: NavItem[];

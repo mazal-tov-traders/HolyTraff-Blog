@@ -1,21 +1,16 @@
+import CloseButtonSVG from '@/assets/CloseButtonSVG';
+import MobileMenuSVG from '@/assets/MobileMenuSVG';
+import { Navigation } from '@/components/common';
+import { Logo } from '@/components/ui';
+import { useScroll } from '@/hooks/useScroll';
+import type { NavItem } from '@/types/navigation';
 import React from 'react';
 import { useTranslation } from '../../i18n';
-import { useScroll } from '@/hooks/useScroll';
-import { Logo } from '@/components/ui';
-import { Navigation } from '@/components/common';
-import MobileMenuSVG from '@/assets/MobileMenuSVG';
-import CloseButtonSVG from '@/assets/CloseButtonSVG';
 
 interface HeaderProps {
   className?: string;
   isMobileMenuOpen: boolean;
   onToggleMobileMenu: () => void;
-}
-
-interface NavItem {
-  label: string;
-  href: string;
-  isActive?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({

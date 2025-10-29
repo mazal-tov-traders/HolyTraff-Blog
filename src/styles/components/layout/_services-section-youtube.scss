@@ -1,5 +1,5 @@
-@use '../../styles/base/variables' as *;
-@use '../../styles/base/mixins' as *;
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
 
 .services-section-youtube {
     padding: 100px 0;
@@ -65,13 +65,7 @@
         bottom: 0;
         border-radius: 4px;
         padding: 0 1px;
-        background: radial-gradient(72.92% 72.92% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        mask-composite: xor;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        z-index: 3;
-        pointer-events: none;
+        @include radial-border;
     }
 
     &:hover {
@@ -132,7 +126,7 @@
         height: 1px;
         width: 100%;
         margin-bottom: 20px;
-        background: linear-gradient(to right, transparent 0%, rgba(144, 255, 0, 0) 0%, rgba(144, 255, 0, 0.3) 5%, rgba(144, 255, 0, 0.6) 15%, #90FF00 25%, #90FF00 75%, rgba(144, 255, 0, 0.6) 85%, rgba(144, 255, 0, 0.3) 90%, rgba(144, 255, 0, 0) 100%, transparent 100%);
+        background: $gradient-border-line-green;
     }
 
     &__title {
@@ -156,7 +150,7 @@
     }
 
     &__title-part-2 {
-        color: #90FF00;
+        color: $tertiary-color;
 
     }
 
@@ -173,7 +167,7 @@
     }
 
     &__button:hover {
-        background: #90FF00;
+        background: $tertiary-color;
         color: #000000;
         scale: 1.02;
     }

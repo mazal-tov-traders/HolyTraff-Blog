@@ -30,6 +30,31 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
+// Градиенты
+$gradient-radial-border: radial-gradient(72.92% 72.92% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+$gradient-border-line-white: linear-gradient(to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 5%,
+        rgba(255, 255, 255, 0.6) 15%,
+        #ffffff 25%,
+        #ffffff 75%,
+        rgba(255, 255, 255, 0.6) 85%,
+        rgba(255, 255, 255, 0.3) 90%,
+        rgba(255, 255, 255, 0) 100%,
+        transparent 100%);
+$gradient-border-line-green: linear-gradient(to right,
+        transparent 0%,
+        rgba(144, 255, 0, 0) 0%,
+        rgba(144, 255, 0, 0.3) 5%,
+        rgba(144, 255, 0, 0.6) 15%,
+        $tertiary-color 25%,
+        $tertiary-color 75%,
+        rgba(144, 255, 0, 0.6) 85%,
+        rgba(144, 255, 0, 0.3) 90%,
+        rgba(144, 255, 0, 0) 100%,
+        transparent 100%);
+
 
 .custom-heading-primary {
     pointer-events: none;

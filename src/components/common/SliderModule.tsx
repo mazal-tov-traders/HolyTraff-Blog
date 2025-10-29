@@ -1,12 +1,13 @@
 import classNames from 'classnames';
+import type { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { LeftArrowSVG, RightArrowSVG } from '../../assets';
 
 interface SliderModuleProps<T> {
-    cards: T[]; // Масив карточок (типізуй за потребою, напр. { title: string; image: string })
-    options?: any; // Опції Embla
-    renderCard: (card: T, index: number) => React.ReactNode; // Функція рендеру карточки
+    cards: T[];
+    options?: EmblaOptionsType;
+    renderCard: (card: T, index: number) => React.ReactNode;
 }
 
 const SliderModule = <T,>({ cards, options = { loop: true, align: 'start' }, renderCard }: SliderModuleProps<T>) => {

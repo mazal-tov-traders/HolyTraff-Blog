@@ -1,5 +1,5 @@
 import { MobileMenu } from '@/components/common';
-import { AboutSection, Footer, Header, Hero, NewsSection, PartnersSection, ServicesSectionYouTube } from '@/components/layout';
+import { AboutSection, Footer, Header, Hero, NewsSection, PartnersSection, ServicesSectionInstagram, ServicesSectionYouTube, ServicesSectionMarket } from '@/components/layout';
 import { RunningLine } from '@/components/ui';
 import { useState } from 'react';
 import { useTranslation } from './i18n';
@@ -51,6 +51,8 @@ function App() {
           count={20}
           className="footer__running-line"
         />
+        <ServicesSectionInstagram />
+        <ServicesSectionMarket />
         <PartnersSection />
         <AboutSection />
         <RunningLine

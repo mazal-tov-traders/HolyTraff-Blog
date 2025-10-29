@@ -279,15 +279,14 @@
         font-size: 50px;
         line-height: 1;
         color: #000;
-        -webkit-text-stroke: 2px #90FF00;
-        text-stroke: 2px #90FF00;
+        -webkit-text-stroke: 2px $tertiary-color;
         margin: 0;
         text-transform: uppercase;
         position: relative;
         z-index: 2;
 
         &--green {
-            color: #90FF00;
+            color: $tertiary-color;
         }
 
         @media (min-width: $breakpoint-md) {
@@ -357,7 +356,7 @@
         letter-spacing: 0.5px;
 
         &--green {
-            color: #90FF00;
+            color: $tertiary-color;
         }
     }
 
@@ -453,11 +452,11 @@
 }
 
 
-@supports not (-webkit-text-stroke: 2px #90FF00) {
+@supports not (-webkit-text-stroke: 2px $tertiary-color) {
 
     .about-section__title-text,
     .about-section__benefits-title {
-        color: #90FF00;
+        color: $tertiary-color;
         text-shadow:
             0 0 20px rgba(144, 255, 0, 0.5),
             2px 2px 0 #000,
