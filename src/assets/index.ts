@@ -15,4 +15,9 @@ export { default as TiktokGreenSVG } from './TiktokGreenSVG';
 export { default as TiktokWitheSVG } from './TiktokWitheSVG';
 export { default as YouTubeGreenSVG } from './YouTubeGreenSVG';
 export { default as YouTubeWitheSVG } from './YouTubeWitheSVG';
-
+export { default as CalendarGreenSVG } from './CalendarGreenSVG';
+export { default as GeoGreenSVG } from './GeoGreenSVG';
+export { default as CalendarWhiteSVG } from './CalendarWhiteSVG';
+export { default as DownArrowSVG } from './DownArrowSVG';
+export { default as LittleLeftArrowSVG } from './LittleLeftArrowSVG';
+export { default as LittleRightArrow } from './LittleRightArrow';

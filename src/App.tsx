@@ -1,12 +1,17 @@
-import { MobileMenu } from '@/components/common';
-import { AboutSection, Footer, Header, Hero, NewsSection, PartnersSection, ServicesSectionInstagram, ServicesSectionYouTube, ServicesSectionMarket } from '@/components/layout';
+import { ErrorBoundary, MobileMenu } from '@/components/common';
+import { AboutSection, EventsCalendarSection, Footer, Header, Hero, NewsSection, PartnersSection, ServicesSectionInstagram, ServicesSectionMarket, ServicesSectionYouTube } from '@/components/layout';
 import { RunningLine } from '@/components/ui';
+// import type { Event } from '@/types/events';
+import useEvents from '@/hooks/useEvents';
 import { useState } from 'react';
 import { useTranslation } from './i18n';
 
 function App() {
   const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Источник данных через хук с нормализацией дат
+  const { events } = useEvents();
 
   const navItems = [
     { label: t('nav.services'), href: '#services-youtube' },
@@ -55,11 +60,10 @@ function App() {
         <ServicesSectionMarket />
         <PartnersSection />
         <AboutSection />
-        <RunningLine
-          speed={3}
-          count={20}
-          className="footer__running-line"
-        />
+        <ErrorBoundary>
+          <EventsCalendarSection events={events} />
+        </ErrorBoundary>
+
       </main>
 
       <Footer />

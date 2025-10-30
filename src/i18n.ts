@@ -63,6 +63,30 @@ const translations: Record<string, Translations> = {
         description: 'Latest news and insights from the Igaming industry. Stay updated with HolyTraff Blog for exclusive content and expert analysis.'
       }
     },
+    calendar: {
+      subtitle: 'calendar',
+      filters: {
+        name: 'Name...',
+        geo: 'Geo...',
+        date: 'Date...'
+      },
+      weekdays: {
+        mon: 'MO',
+        tue: 'TU',
+        wed: 'WE',
+        thu: 'TH',
+        fri: 'FR',
+        sat: 'SA',
+        sun: 'SU',
+      },
+      aria: {
+        prevMonth: 'Previous month',
+        nextMonth: 'Next month',
+        clearDate: 'Clear date',
+      },
+      eventsHeading: 'Upcoming events',
+      buyTicket: 'BUY TICKET'
+    },
     partners: {
       subtitle: "OUR PARTNERS"
     },
@@ -158,6 +182,30 @@ const translations: Record<string, Translations> = {
       holyTraffBlog: {
         description: 'Останні новини та інсайти з індустрії Igaming. Будьте в курсі з HolyTraff Blog для ексклюзивного контенту та експертного аналізу.'
       }
+    },
+    calendar: {
+      subtitle: 'календар',
+      filters: {
+        name: 'Назва...',
+        geo: 'Гео...',
+        date: 'Дата...'
+      },
+      weekdays: {
+        mon: 'ПН',
+        tue: 'ВТ',
+        wed: 'СР',
+        thu: 'ЧТ',
+        fri: 'ПТ',
+        sat: 'СБ',
+        sun: 'НД',
+      },
+      aria: {
+        prevMonth: 'Попередній місяць',
+        nextMonth: 'Наступний місяць',
+        clearDate: 'Очистити дату',
+      },
+      eventsHeading: 'Найближчі події',
+      buyTicket: 'ПРИДБАТИ КВИТОК'
     },
     partners: {
       subtitle: "Нашi партнери"

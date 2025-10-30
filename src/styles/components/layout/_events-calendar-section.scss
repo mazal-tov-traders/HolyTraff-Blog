@@ -1,0 +1,579 @@
+@use '../../base/variables' as *;
+@use '../../base/mixins' as *;
+
+.events-calendar-section {
+
+    color: white;
+    padding: 60px 0;
+    position: relative;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 100px 0;
+    }
+
+    &__container.page-width {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        margin-left: 0;
+        text-align: left;
+
+        @media screen and (max-width: $breakpoint-lg) {
+            transform: translateX(0px);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 22px;
+        text-align: left;
+        margin-left: 8px;
+        margin-top: -52px;
+
+        @media screen and (min-width: $breakpoint-lg) {
+
+            margin-bottom: 55px;
+            text-align: left;
+            margin-left: 20px;
+            margin-top: -84px;
+        }
+    }
+
+    // NAVBAR
+    &__navbar {
+        background: #FFFFFF14;
+        padding: 29px 0;
+        margin-bottom: 29px;
+
+        @media (min-width: $breakpoint-lg) {
+            margin-bottom: 42px;
+        }
+    }
+
+    &__filters {
+        display: flex;
+        gap: 20px;
+        flex: 1;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        @media (max-width: $breakpoint-md) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__filter-wrapper {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 0px;
+
+        @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+            max-width: 171px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            max-width: 283px;
+        }
+    }
+
+    &__select {
+        padding: 12px 40px 12px 12px;
+        background: #FFFFFF14;
+        border: 1px solid $primary-color;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 14px;
+        width: 100%;
+        font-family: $font-jet-brains;
+        cursor: pointer;
+        transition: $transition;
+        text-align: left;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__clear-btn {
+        position: absolute;
+        right: 36px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $primary-color;
+        font-size: 27px;
+        padding: 6px 10px;
+        line-height: 1;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+        z-index: 10;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:focus {
+            outline-offset: 2px;
+        }
+    }
+
+    &__select-arrow {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        transition: transform 0.2s ease;
+        margin-top: 1px;
+
+        &.is-open {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    // КАСТОМНЫЙ ДРОПДАУН-ЛИСТ
+    &__custom-list {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 100%;
+        max-height: 283px;
+        overflow-y: auto;
+        background: #191919;
+        border-radius: 0px 0px 3px 3px;
+        z-index: 20;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        padding: 8px 0;
+    }
+
+    &__custom-option {
+        width: 100%;
+        text-align: left;
+        padding: 6.5px 12px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-family: $font-jet-brains;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: #2a2a2a;
+        }
+
+        &.is-selected {
+            background: #2a2a2a;
+            color: #fff;
+        }
+    }
+
+    &__date-wrapper {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            max-width: 283px;
+        }
+    }
+
+    &__date-input {
+        padding: 12px 40px 12px 12px;
+        background: #FFFFFF14;
+        border: 1px solid $primary-color;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 14px;
+        width: 100%;
+        font-family: $font-jet-brains;
+        cursor: pointer;
+        transition: $transition;
+
+        &::placeholder {
+            color: #ffffff;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__calendar-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition;
+        pointer-events: none;
+
+        &.clickable {
+            cursor: pointer;
+            pointer-events: all;
+            background: none;
+            border: none;
+            line-height: 1;
+            color: #fff;
+            font-size: 27px;
+            padding: 6px 10px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__date-input.has-value {
+        color: #fff;
+    }
+
+    // CALENDAR DROPDOWN
+    &__calendar-dropdown {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        right: 0;
+        background: #191919;
+        border-radius: 0px 0px 3px 3px;
+        padding: 8px 30px;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        max-width: 100%;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-sm) {
+            max-width: 283px;
+        }
+
+    }
+
+    &__calendar-dropdown-header {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 17px;
+        color: #fff;
+    }
+
+    &__nav-btn {
+        background: none;
+        border: none;
+        color: $tertiary-color;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px 12px;
+        transition: $transition;
+        font-weight: 700;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: $hover-tertiary-color;
+                }
+
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__month-title {
+        text-transform: uppercase;
+        font-family: $font-arial-black;
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    &__month-title-green {
+        color: $tertiary-color;
+    }
+
+    &__weekdays,
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        text-align: center;
+    }
+
+    &__weekday {
+        font-size: 8.5px;
+        color: $tertiary-color;
+        padding: 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: $fotn-arial;
+    }
+
+    &__day {
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: $transition;
+        font-size: 11px;
+        font-weight: 400;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $fotn-arial;
+        background: none;
+        border: none;
+        color: #fff;
+
+
+
+        &:hover:not(&--empty):not(&--today) {
+            background: $tertiary-color;
+            color: #000;
+            font-weight: 700;
+        }
+
+        &:focus {
+            outline: 2px solid $tertiary-color;
+            outline-offset: 2px;
+            color: #000;
+            font-weight: 700;
+
+        }
+
+        &--empty {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &--today {
+            background: $tertiary-color;
+            color: #000;
+            font-weight: 700;
+        }
+
+        &--selected {
+            background: $tertiary-color;
+            color: #000;
+            font-weight: 700;
+        }
+    }
+
+
+
+    &__heading {
+        font-family: $font-arial-black;
+        font-size: 14px;
+        font-weight: 900;
+        color: $primary-color;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 28px;
+
+        @media (min-width: $breakpoint-lg) {
+            font-size: 36px;
+            margin-bottom: 42px;
+        }
+    }
+
+    // EVENT CARDS GRID
+
+    &__event-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 32px;
+
+        @media (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $breakpoint-xl) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+    }
+
+    &__event-card {
+        position: relative;
+        background:
+            linear-gradient(330.51deg,
+                transparent 0%,
+                transparent 64%,
+                rgba(255, 255, 255, 0) 69.04%,
+                rgba(255, 255, 255, 0.1) 101.83%,
+                transparent 100%),
+            linear-gradient(337.51deg,
+                rgba(255, 255, 255, 0) 72.04%,
+                rgba(255, 255, 255, 0.1) 94.83%),
+            linear-gradient(0deg,
+                #0F0F0F,
+                #0F0F0F);
+
+        border-radius: 4px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 52px;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        padding: 58px 62px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 4px;
+            padding: 0 2px;
+            background: radial-gradient(72.92% 72.92% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: xor;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        &:hover {
+            border-color: $tertiary-color;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(144, 255, 0, 0.2);
+        }
+    }
+
+    &__event-logo {
+        font-family: $font-blangkon-remastered;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 28px;
+        }
+
+        img {
+            max-width: 75%;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        span {
+            display: block;
+
+        }
+    }
+
+    &__event-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    &__event-detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__event-icon {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29px;
+        flex-shrink: 0;
+    }
+
+    &__event-text {
+        font-family: $fotn-arial;
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 400;
+        line-height: 1.4;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 16px;
+        }
+    }
+
+    &__event-button.custom-button-primary {
+        width: 100%;
+        margin-top: auto;
+        font-size: 14px;
+        padding: 12px 16px;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 16px;
+            padding: 14px 20px;
+        }
+    }
+
+    // EVENT LIST (legacy, для обратной совместимости)
+    &__event-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__event-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-bottom: 1px solid #333;
+        font-size: 14px;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 16px;
+            padding: 20px 0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__event-name {
+        font-weight: 600;
+        font-family: $font-blangkon-remastered;
+        color: #fff;
+    }
+
+    &__event-country {
+        color: #aaa;
+        font-family: $font-jet-brains;
+    }
+
+    &__event-empty {
+        text-align: center;
+        color: #888;
+        padding: 40px 0;
+        font-size: 18px;
+        font-family: $font-jet-brains;
+    }
+}
