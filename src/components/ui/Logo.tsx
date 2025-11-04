@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface LogoProps {
   href?: string;
@@ -10,7 +11,7 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({
-  href = '#home',
+  href,
   src = '/images/logo.webp',
   alt = 'Logo',
   className = '',
@@ -18,8 +19,25 @@ const Logo: React.FC<LogoProps> = ({
 }) => {
   const logoContent = <img src={src} alt={alt} className='logo__image' />;
 
+  // Всегда ведет на главную страницу
+  if (!href) {
+    return (
+      <Link 
+        to="/"
+        onClick={onClick}
+        className={`logo ${className}`}
+      >
+        {logoContent}
+      </Link>
+    );
+  }
+
   return (
-    <a href={href} onClick={onClick} className={`logo ${className}`}>
+    <a 
+      href={href} 
+      onClick={onClick} 
+      className={`logo ${className}`}
+    >
       {logoContent}
     </a>
   );

@@ -1,10 +1,5 @@
 import React from 'react';
 
-// Простая система переводов без внешних зависимостей
-// Логика определения языка:
-// 1. Если пользователь уже выбирал язык - используем сохраненный выбор
-// 2. Если браузер на английском - показываем английский интерфейс
-// 3. Для всех остальных языков (украинский, русский, немецкий и т.д.) - показываем украинский интерфейс
 interface Translations {
   [key: string]: string | Translations;
 }
@@ -116,6 +111,12 @@ const translations: Record<string, Translations> = {
       description: 'is an expert platform on traffic arbitrage and the iGaming industry, covering key market events: conferences, business meetings and networking events. We talk about key players, affiliate programs, affiliates and brands that drive industry development.',
       benefitsTitle: 'WHAT YOU GET WITH US?',
       benefitsText: 'Brands, affiliate programs, platforms and services – expanding media presence, increasing the customer base and effective product positioning in the market. Affiliates – access to real successful company cases, exclusive terms from top affiliate programs and new opportunities for business scaling.'
+    },
+    collectionPhoto: {
+      subtitle: "photo report",
+      learnMore: "Learn More",
+      expand: "Expand",
+      collapse: "Collapse"
     },
     footer: {
       contactUs1: 'Contact',
@@ -236,6 +237,12 @@ const translations: Record<string, Translations> = {
       description: 'єкспертна платформа про арбітраж трафіку та індустрію iGaming, що висвітлює ключові події ринку: конференції, бізнес-мітинги та нетворкінг-заходи. Ми розповідаємо про провідних гравців, партнерські програми, аффіліатів і бренди, які визначають розвиток галузі.',
       benefitsTitle: 'ЩО ВИ ОТРИМАЄТЕ З НАМИ?',
       benefitsText: 'Бренди, партнерські програми, платформи та сервіси – розширення медійної присутності, збільшення клієнтської бази та ефективне позиціонування продуктів на ринку. Аффіліати – доступ до реальних кейсів успішних компаній, ексклюзивні умови від топових партнерських програм і нові можливості для масштабування бізнесу.'
+    },
+    collectionPhoto: {
+      subtitle: "фотозвіт",
+      learnMore: "дізнатись більше",
+      expand: "розгорнути",
+      collapse: "згорнути"
     },
     footer: {
       contactUs1: 'звʼязатись',

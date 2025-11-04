@@ -21,3 +21,4 @@ export { default as CalendarWhiteSVG } from './CalendarWhiteSVG';
 export { default as DownArrowSVG } from './DownArrowSVG';
 export { default as LittleLeftArrowSVG } from './LittleLeftArrowSVG';
 export { default as LittleRightArrow } from './LittleRightArrow';
+export { default as AffHubSVG } from './AffHubSVG';
